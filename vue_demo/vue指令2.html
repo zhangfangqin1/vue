@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue指令</title>
+	<script src="vue.js"></script>
+	<script>
+		window.onload=function() {
+			new Vue({
+				el:'#box',
+				data:{
+					arr:['apple', 'banana', 'orange', 'pear'],
+					json:{a:'apple', b:'banana', c:'orange'}
+				}
+			});
+		};
+	</script>
+</head>
+<body>
+	<div id="box">
+		<ul>
+			<li v-for="value in arr">
+				{{value}}<!--循环-->
+			</li>
+		</ul>
+
+		<ul>
+			<li v-for="value in json">
+				{{value}}
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

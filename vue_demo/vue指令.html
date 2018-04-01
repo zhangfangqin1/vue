@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue指令</title>
+	<script src="vue.js"></script>
+	<script>
+		window.onload=function() {
+			new Vue({
+				el:'#box',
+				data:{
+					msg:'welcome vue'
+				}
+			});
+		};
+	</script>
+</head>
+<body>
+	<div id="box">
+		<input type="text" v-model="msg">
+		<br>
+		{{msg}}<!--双向绑定-->
+	</div>
+</body>
+</html>
